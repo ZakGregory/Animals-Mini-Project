@@ -1,0 +1,12 @@
+FROM python:3.7
+
+COPY requirments.txt .
+
+RUN pip3 install -r requirments.txt
+
+COPY service2/app.py .
+
+EXPOSE 5001
+
+ENTRYPOINT ["python3", "app.py"]
+
