@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home():
-    animal_response = requests.get('http://34.89.9.34:5001/get/animal/').text
-    noise_response= requests.post('http://34.89.9.34:5001/post/animal/', 'animal_response').text
+    animal_response = requests.get('http://35.246.77.235:5001/get/animal/').text
+    noise_response= requests.post('http://35.246.77.235:5001/post/animal/', animal_response).text
     a= animal_response+noise_response
     return a
 
